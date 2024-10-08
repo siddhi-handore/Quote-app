@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html,body,#root{
+  width:100%;
+  height:100%;
+  background-color:#153448;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width:50%;
+  height:70%;
+  border:3px dashed white;
+  border-radius:20px;
+  position:relative;
+}
+.container .quote{
+  width:100%;
+  padding:8%;
+  height:100%;
+  border-radius: 20px;
+  background-color: #9BB0C1;
+  position:absolute;
+  top:8%;
+  right:7%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.quote .main{
+  width:100%;
+  height:70%;
+  color:#fff;
+  /* background-color: brown; */
+  /* background-color: antiquewhite; */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.main h1{
+  font-size:2.5vw;
+  line-height:3vw;
+  /* text-align:left; */
+  margin-top:5%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.main h3{
+  font-size:1.5vw;
+  font-weight: normal;
+  /* text-align: left; */
+  margin-top:8%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.quote .icons{
+  width:100%;
+  height:30%;
+  /* background-color: aqua; */
+  display:flex;
+  /*
+  justify-content:space-between;
+  align-items:center;
+  gap:10%; */
+}
+.icons .i1 {
+  width:50%;
+  height:100%;
+  font-size:2vw;
+  padding:2%;
+  /* background-color: chartreuse; */
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  gap:30%;
+}
+.icons .i1 button{
+  padding:4% 8%;
+  border-radius:10px;
+  font-size:1.5vw;
+  border:none;
+  background-color: #153448;
+  color:#fff;
+  &:hover{
+    opacity:0.5;
+  }
+}
+.icons .next{
+  width:50%;
+  height:100%;
+  /* background-color: blue; */
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.next button{
+  padding:2% 10%;
+  font-size:2.5vw;
+  /* font-weight: bold; */
+  border-radius: 10px;
+  border: none;
+  background-color: #153448;
+  color:#fff;
+  &:hover{
+    opacity:0.5;
+  }
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loader span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #153448;
+  animation: expand 0.8s ease-in-out infinite;
+}
+
+/* Different delay for each child element for the pulse effect */
+.loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for the expand animation */
+@keyframes expand {
+  0%, 100% {
+    transform: scale(0.8); /* Initial and final state */
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2); /* Middle state (expanded) */
+    opacity: 1;
+  }
+}
+
+
+@media (max-width:600px)
+{
+  .container{
+    width:80%;
+    height:80%;
+  }
+  .main h1{
+    font-size:7vw;
+    line-height:8vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .main h3{
+    font-size:6vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .icons .i1 button{
+    padding:12% 18%;
+    font-size:4.5vw;
+  }
+  .next button {
+  padding:10% 15%;
+  font-size:5.5vw;
+  }
+}
